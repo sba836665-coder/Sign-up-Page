@@ -1,0 +1,58 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  padding: 50px;
+  background-color:bisque;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background-color: #041e48;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  gap: 40px; /* spacing between items */
+  max-width: 900px;
+  margin: 120px auto; /* push below header */
+}
+
+.gallery-item {
+  position: relative; /* parent for overlay */
+  width: 100%;
+}
+
+.gallery img {
+  width: 100%; /* fit container */
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #f70808;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  border-color: #21de14;
+}
+
+.overlay-text {
+  position: absolute;
+  /* top: 1px; place near top of image */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: rgba(0,0,0,0.6);
+  padding: 6px 12px;
+  border-radius: 5px;
+  white-space: nowrap; /* keep word intact */
+}
